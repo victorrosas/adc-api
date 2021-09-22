@@ -17,6 +17,12 @@ app.get('/hello_world', (req, res) => {
   res.send('hello world')
 });
 
+app.post('/create', (req, res) => {
+  const title = req.body.title
+
+  res.send(`Post: ${title}`)
+});
+
 app.post('/create_post', async (req, res) => {
   try {
     const { title, content } = req.body;
@@ -25,7 +31,7 @@ app.post('/create_post', async (req, res) => {
 
     res.send(post);
   }catch (err) {
-    res.status(400).send(err);
+    res.status(400).send(err); 
   }
 });
 
