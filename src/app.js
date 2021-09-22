@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use(cors())
 
-app.get('/hello_word', (req, res) => {
+app.get('/hello_world', (req, res) => {
   res.send('hello world')
 });
 
