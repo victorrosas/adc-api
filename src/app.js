@@ -13,6 +13,10 @@ app.use(express.json());
 
 app.use(cors())
 
+app.get('/hello_word', (req, res) => {
+  res.send('hello world')
+});
+
 app.post('/create_post', async (req, res) => {
   try {
     const { title, content } = req.body;
